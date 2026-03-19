@@ -1,0 +1,49 @@
+.heroSection {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+}
+
+.home {
+  width: 100%;
+  height: 100%;
+  display: block;
+  /* Use transition for a smooth shift when resizing the window */
+  transition: padding-top 0.3s ease; 
+}
+
+/* ================= BREAKPOINTS ================= */
+
+/* For Tablets and smaller */
+@media (max-width: 768px) {
+  .home {
+    /* Adjust this value to push it down exactly where you want it */
+    padding-top: 50px; 
+  }
+}
+
+/* For Mobile phones */
+@media (max-width: 480px) {
+  .home {
+    /* Push it down a bit further on very small screens */
+    padding-top: 120px; 
+  }
+}
+
+/* Ensure the loader stays centered regardless of padding */
+.loader {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: inherit;
+  font-family: sans-serif;
+}

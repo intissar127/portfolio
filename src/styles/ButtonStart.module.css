@@ -1,0 +1,32 @@
+.startButton {
+  color: #0a0909;
+
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  font-family: Miso, Arial Narrow, sans-serif;
+  font-size: 2.22em;
+  text-transform: uppercase;
+  border: 0.075em solid #fff;
+  cursor: pointer;
+
+  letter-spacing: 0.15em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  outline: 5px solid #0a0909;
+  top: -5px;
+  right: -392px;
+}
+
+.startButton:hover {
+  transition: 800ms ease all;
+  background-color: rgb(172, 175, 175);
+  outline: 3px solid #f4eaea;
+  border: none;
+}
+.playIcon {
+  top: 3px;
+  left: -5px;
+  
+  position: relative;
+}

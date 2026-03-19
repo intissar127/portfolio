@@ -1,0 +1,50 @@
+.btn {
+  background-color: aqua;
+  margin-top: 20px;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid var(--color-blue-200);
+  color: var(--color-blue-200);
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 50px;
+  height: 200%;
+  background-color: var(--color-blue-200);
+  transform: rotate(30deg);
+  transition: left 0.6s ease-in-out;
+  z-index: 1;
+}
+
+.btn:hover::after {
+  left: 120%;
+}
+.btn:hover {
+  transform: translatex(4px);
+  transform: translatey(-4px);
+}
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover .arrow {
+  transform: translateX(7px);
+}

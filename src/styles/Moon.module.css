@@ -1,0 +1,53 @@
+/* Moon Toggle styles */
+.toggleSwitch {
+  position: relative;
+  left: -2px;
+  top: -5px;
+  width: 40px;
+  height: 40px;
+  background-color: #fffdf2; /* Moon inner */
+  border: 4px solid #dee1c5; /* Moon outer */
+  border-radius: 50%;
+  transition: all 3s ease-in-out;
+}
+
+/* Craters on the moon */
+.toggleSwitchFigureAlt {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #efeeda;
+  border-radius: 50%;
+  box-shadow: 42px -7px 0 -3px #fcfcfc,
+    /* Top-left crater */ 75px -10px 0 -3px #fcfcfc,
+    /* Top-right crater */ 54px 4px 0 -4px #fcfcfc,
+    /* Middle-left crater */ 83px 7px 0 -2px #fcfcfc,
+    /* Middle-right crater */ 63px 18px 0 -4px #fcfcfc,
+    /* Bottom-left crater */ 44px 28px 0 -2px #fcfcfc,
+    /* Bottom-middle crater */ 78px 23px 0 -3px #fcfcfc; /* Bottom-right crater */
+}
+
+/* Additional smaller craters */
+.toggleSwitchFigureAlt::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 18px;
+  width: 7px;
+  height: 7px;
+  background-color: #efeeda;
+  border-radius: 50%;
+  border: 4px solid #dee1c5;
+}
+
+.toggleSwitchFigureAlt::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 15px;
+  width: 2px;
+  height: 2px;
+  background-color: #efeeda;
+  border-radius: 50%;
+  border: 4px solid #dee1c5;
+}

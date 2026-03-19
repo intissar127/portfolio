@@ -1,0 +1,14 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  
+}
+
+/* Apply to your React root container */
+#root, .app-container {
+  overflow-x: hidden;
+  width: 100%;
+}

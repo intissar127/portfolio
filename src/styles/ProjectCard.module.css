@@ -1,0 +1,162 @@
+/* ================= CARD ================= */
+.card {
+  padding: 26px;
+  border-radius: 20px;
+
+  /* background: linear-gradient(145deg, #4e6db3, #395695); */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.35s ease;
+}
+
+/* ✨ Glow gradient border */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+
+  /* background: linear-gradient(120deg, #00f2ff, #6366f1, #989c15); */
+
+  -webkit-mask: linear-gradient(#000 0 0) content-box,
+                linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* ✨ Floating effect */
+.card:hover {
+  transform: translateY(-10px) scale(1.015);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* ================= TITLE ================= */
+.projectTitle {
+  font-size: 22px;
+  font-weight: 700;
+
+  background: linear-gradient(90deg, #00f2ff, #5657b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= DESCRIPTION ================= */
+.description {
+  font-size: 0.95rem;
+  color: #191a1e;
+  line-height: 1.6;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ================= SKILLS ================= */
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 10px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.178);
+  border: 1px solid rgba(19, 19, 19, 0.06);
+
+  transition: all 0.25s ease;
+}
+
+.skill:hover {
+  background: rgba(0, 242, 255, 0.1);
+  border-color: rgba(0, 242, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.img {
+  height: 16px;
+}
+
+.name {
+  font-size: 12px;
+  color: #80a3e9;
+}
+
+/* ================= LINKS ================= */
+.linksContainer {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.link {
+  font-size: 13px;
+  font-weight: 600;
+
+  padding: 6px 12px;
+  border-radius: 8px;
+
+  color: #00f2ff;
+  text-decoration: none;
+
+  border: 1px solid rgba(0, 242, 255, 0.3);
+  background: rgba(0, 242, 255, 0.05);
+
+  transition: all 0.25s ease;
+}
+
+.link:hover {
+  background: linear-gradient(90deg, #00f2ff, #6366f1);
+  color: #114343;
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.6);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .card {
+    padding: 20%;
+  }
+
+  .projectTitle {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    -webkit-line-clamp: 4;
+  }
+
+  .skill {
+    padding: 5px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 15px;
+    /* width:70%; */
+  }
+}

@@ -1,0 +1,28 @@
+.VideoTitle {
+  text-shadow: 0 0 10px #0a2bbf, 0 0 20px #73b0dc, 0 0 30px #626cda;
+  font-size: 30px;
+
+  font-weight: 800;
+  font-family: cursive;
+  margin-left: 103px;
+  margin-top: 53px;
+  color: var(--color-blue-200);
+  font-weight: bold;
+}
+.VideoContainer {
+  margin-bottom: 170px;
+}
+/* .Video {
+  
+} */
+.VideoBtn {
+  margin-left: 58px;
+
+  margin-top: 440px;
+}
+.VideoPlayer {
+  margin-top: 133px;
+  margin-left: -15rem;
+  border-radius: 20px;
+  height: 20rem;
+}

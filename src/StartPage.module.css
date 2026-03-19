@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--color-grey-900); /* Uses your color variables */
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  perspective: 1000px; /* Creates a 3D effect */
+}
+
+.startText {
+  font-size: 260px;
+  font-weight: bold;
+  color: var(--color-grey-0); /* Uses the text color from theme */
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  transform-style: preserve-3d;
+  text-shadow: 0 0 10px var(--color-blue-200), 0 0 20px var(--color-blue-300),
+    0 0 40px var(--color-blue-400), 0 0 80px var(--color-blue-500); /* Glowing effect */
+}
+.neonButton {
+  margin-top: 50px;
+  padding: 15px 30px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--color-grey-0);
+  background-color: transparent;
+  border: 2px solid var(--color-blue-300);
+  border-radius: 8px;
+  cursor: pointer;
+  text-shadow: 0 0 5px var(--color-blue-200), 0 0 10px var(--color-blue-300),
+    0 0 20px var(--color-blue-400), 0 0 40px var(--color-blue-500); /* Glowing effect */
+}

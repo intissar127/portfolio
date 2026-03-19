@@ -1,0 +1,58 @@
+/* Sun Toggle styles */
+.toggleSwitch {
+  position: relative;
+  margin-left: 60px;
+  top: -3px;
+  left: -5px;
+  width: 40px;
+  height: 40px;
+  background-color: #f5eb42; /* Sun inner */
+  border: 4px solid #e4c74d; /* Sun outer */
+  border-radius: 50%;
+  transition: all 5s ease-in-out;
+}
+
+/* Cloud shape under the sun */
+.toggleSwitchFigure {
+  position: absolute;
+  bottom: -20px;
+  left: -30px;
+  width: 80px;
+  height: 30px;
+  border: 8px solid #d4d4d2;
+  border-radius: 20px;
+  background-color: white;
+  transform: scale(0.4);
+  transition: all 0.12s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Small cloud bubbles */
+.toggleSwitchFigure::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -10px;
+  width: 30px;
+  height: 30px;
+  border: 8px solid #d4d4d2;
+  border-radius: 100%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotateZ(30deg);
+  background-color: white;
+}
+
+.toggleSwitchFigure::after {
+  content: "";
+  position: absolute;
+  top: -65px;
+  left: -42px;
+  width: 15px;
+  height: 15px;
+  border: 8px solid #d4d4d2;
+  border-radius: 100%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotateZ(170deg);
+  background-color: white;
+}

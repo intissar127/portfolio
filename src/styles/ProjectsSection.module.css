@@ -1,0 +1,161 @@
+/* ================= SECTION ================= */
+.projectsContainer {
+
+position: relative !important; /* Changes from whatever inherited value was there */
+  left: auto !important;
+  right: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  /* 2. Standard Layout */
+  width: 100%;
+  max-width: 100vw;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+}
+
+/* Center timeline */
+:global(.vertical-timeline) {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ================= TITLE ================= */
+/* .sectionTitle { text-align: center; font-size: 6.5rem; font-weight: 700; margin-bottom: 60px; color:#0c6fd1d3;
+margin-bottom: 5%; margin-top: 6%;margin-left: 0;} */
+
+/* gradient animation */
+@keyframes gradientMove {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+
+/* highlight word */
+.highlight {
+  position: relative;
+  -webkit-text-fill-color: white;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background: linear-gradient(120deg, #6366f1, #06b6d4);
+  border-radius: 8px;
+
+  filter: blur(12px);
+  opacity: 0.6;
+}
+
+/* ================= TIMELINE ================= */
+:global(.vertical-timeline::before) {
+  background: linear-gradient(to bottom, #8385e3, #06b6d4);
+  width: 3px;
+}
+
+:global(.vertical-timeline-element-content) {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* icon */
+.timelineIconWrapper {
+  background: linear-gradient(125deg, #0c6fd1d3, #62dcf2);
+  border-radius: 50%;
+}
+
+/* ================= MOBILE ================= */
+/* ================= MOBILE ================= */
+
+/* ================= SECTION ================= */
+.projectsContainer {
+  padding: 80px 0; /* Vertical padding only */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Change from 60% to 100% to fill screen */
+  max-width: 100vw;
+  overflow-x: hidden; /* Safety against horizontal scroll */
+  box-sizing: border-box;
+}
+
+/* ================= TITLE ================= */
+.sectionTitle { 
+  text-align: center; 
+  font-size: 4rem; /* 6.5rem is too big for many screens, 4rem is safer */
+  font-weight: 700; 
+  color: #0c6fd1d3;
+  margin: 40px auto; 
+  width: 100%;
+}
+
+/* ================= MOBILE FIXES ================= */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  /* Force the timeline element to stay within screen bounds */
+  :global(.vertical-timeline-element) {
+    width: 100% !important; /* Fix: Changed from 140% */
+    margin: 0 0 10px 0 !important;
+  }
+
+  :global(.vertical-timeline-element-content) {
+    margin-left: 0 !important;
+    width: 90% !important; /* Leave a small gap for breathing room */
+    margin: 0 auto !important; /* Center the card inside the row */
+    padding: 0 !important;
+  }
+
+  /* Completely remove the vertical line and icon on mobile */
+  :global(.vertical-timeline::before),
+  :global(.vertical-timeline-element-icon) {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  /* 1. Ensure the main container doesn't have an offset */
+  .projectsContainer {
+    width: 100%;
+    margin: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* 2. Target the library's internal wrapper */
+  :global(.vertical-timeline-element) {
+    width: 100% !important;
+    margin: 0 auto 30px auto !important;
+    float: none !important; /* This stops it from leaning left/right */
+  }
+
+  /* 3. Make the content box centered and full-width */
+  :global(.vertical-timeline-element-content) {
+    width: 90% !important;   /* Adjust this if you want wider/narrower cards */
+    margin: 0 auto !important; /* This is the "magic" line for centering */
+    padding: 0 !important;
+    float: none !important;
+  }
+
+  /* 4. Ensure no hidden elements are pushing the layout */
+  :global(.vertical-timeline::before),
+  :global(.vertical-timeline-element-icon),
+  :global(.vertical-timeline-element-content-arrow) {
+    display: none !important;
+  }
+}

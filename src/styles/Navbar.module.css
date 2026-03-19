@@ -1,0 +1,134 @@
+/* --- 1. DESKTOP BASE (STAYS EXACTLY AS YOU HAD IT) --- */
+.navbar {
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 110px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  background-color: var(--color-grey-800);
+}
+
+.logo {
+  position: relative;
+  top: 6px;
+}
+
+ul {
+  display: flex;
+  gap: 6rem; /* Keeping your wide desktop gap */
+  list-style: none;
+}
+
+.navbar li {
+  padding-top: 40px; /* Keeping your desktop alignment */
+}
+
+.navbar li:last-child {
+  padding-top: 30px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--color-grey-500);
+  font-weight: 900;
+  font-size: 1.2em;
+  position: relative;
+}
+
+.link:hover {
+  color: var(--color-grey-300);
+}
+
+/* --- 2. THE MOBILE BREAKPOINT (FIXES OVERLAP) --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;        /* MUST be auto for mobile to fit everything */
+    padding: 20px 10px;
+    gap: 10px;           /* Reduced gap for mobile */
+    position: fixed;  /* Helps avoid overlapping the 3D scene below */
+  }
+
+  .logo {
+    top: 0;
+    margin-bottom: 5px;
+  }
+
+  ul {
+    flex-direction: row; /* Try row first so it doesn't take too much vertical space */
+    gap: 1.5rem;         /* Tight gap for mobile */
+    flex-wrap: wrap;     /* Allows toggle to wrap to next line if needed */
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar li {
+    padding-top: 0 !important; /* Forces removal of the 40px desktop padding */
+  }
+
+  .navbar li:last-child {
+    padding-top: 0 !important; /* Align toggle with links */
+    display: flex;
+    justify-content: center;
+  }
+  .navContainer { /* Or your navbar class */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+  }
+
+  /* Reset any float or absolute positioning you have on the toggle */
+  
+}
+
+/* --- 3. THE TINY MOBILE BREAKPOINT (FOR PHONES < 400px) --- */
+@media (max-width: 400px) {
+  ul {
+    flex-direction: column; /* Stack vertically only on very small screens */
+    gap: 12px;
+  }
+  .navbar { /* Or your navbar class */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    padding-left: 10%;
+  }
+
+  /* Reset any float or absolute positioning you have on the toggle */
+  
+}
+
+/* --- 4. ACTIVE LINK ANIMATION --- */
+.link.active {
+  color: #00f2ff;
+  text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+.link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00f2ff, transparent);
+  box-shadow: 0 0 8px #00f2ff;
+  animation: slideIn 0.4s ease forwards;
+}
+
+@keyframes slideIn {
+  from { transform: scaleX(0); opacity: 0; }
+  to { transform: scaleX(1); opacity: 1; }
+
+}

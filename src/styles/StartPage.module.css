@@ -1,0 +1,85 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--color-grey-900);
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  perspective: 1000px;
+}
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 80px rgba(61, 42, 233, 0.8),
+      0 0 40px rgba(36, 12, 254, 0.6), 0 0 40px rgba(36, 12, 254, 0.4),
+      0 0 60px rgba(36, 12, 254, 0.2);
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+.startText {
+  margin-top: 130px;
+  font-size: 260px;
+  font-family: "Times New Roman", Times, serif;
+
+  color: #240cfe;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transform-style: preserve-3d;
+
+  animation: flicker 1.2s infinite alternate;
+}
+.animateA {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 38%;
+  transform: translate(100%, 100%) scale(180);
+  opacity: 0;
+  transition: transform 1.2s ease-in-out, opacity 1.2s ease-in-out;
+}
+
+h1 span {
+  color: #240cfe;
+}
+@media screen and (max-width: 768px) {
+  .startText {
+    font-size: 80px; /* Reduce size for small screens */
+    margin-top: 90%; /* Adjust spacing */
+    margin-left: 0;
+    letter-spacing: 0.1em; /* Maintain readability */
+  }
+
+  .animateA {
+    transform: translate(-50%, -50%) scale(5); /* Adjust scale for better visibility */
+  }
+}
+.neonButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 40px;
+  font-size: 1.5em;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #240cfe;
+  border-radius: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease-in-out;
+}

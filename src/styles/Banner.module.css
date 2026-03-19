@@ -1,0 +1,55 @@
+/* --- KEEP DESKTOP EXACTLY AS IS --- */
+.scrollingBanner {
+  width: 120rem;
+  overflow: hidden;
+  margin-bottom: 9px;
+  background-color: var(--color-blue-100);
+  color: var(--color-blue-400);
+  white-space: nowrap;
+  position: relative;
+  padding: 20px 0;
+  transform: rotate(6deg);
+  transform-origin: left center;
+}
+
+.mantra {
+  text-shadow: 0 0 20px #34a7dd00, 0 0 30px #2c7ca1, 0 0 40px #2836cc2c;
+  font-family: "Bungee Shade", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  display: inline-block;
+  font-weight: bold;
+  animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+  from { transform: translateX(130%); }
+  to { transform: translateX(-100%); }
+}
+
+/* --- TABLET & MOBILE FIXES --- */
+@media (max-width: 768px) {
+  .scrollingBanner {
+    width: 100vw;       /* Force it to match screen width exactly */
+    transform: rotate(3deg); /* Reduced rotation so it doesn't overlap content as much */
+    padding: 10px 0;    /* Thinner banner for smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .mantra {
+    font-size: 24px;    /* Smaller text so it's readable on mobile */
+    animation-duration: 8s; /* Slightly faster since the distance (100vw) is shorter */
+  }
+}
+
+@media (max-width: 480px) {
+  .scrollingBanner {
+    transform: rotate(5deg); /* Remove rotation on tiny phones to keep the layout clean */
+    margin-bottom: 15px;
+  }
+
+  .mantra {
+    font-size: 18px;    /* Even smaller for small devices */
+  }
+}

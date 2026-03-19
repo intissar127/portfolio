@@ -1,0 +1,20 @@
+.foundTitle {
+  text-shadow: 0 0 10px #0a2bbf, 0 0 20px #73b0dc, 0 0 30px #626cda;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 800;
+  font-family: cursive;
+  margin-bottom: 23px;
+  margin-top: 73px;
+  color: var(--color-blue-200);
+}
+.foundimg {
+  margin-bottom: 33px;
+  margin-top: 33px;
+  margin-left: 28rem;
+  border-radius: 20px;
+}
+.foundBtn {
+  margin-left: 35rem;
+  margin-bottom: 50px;
+}

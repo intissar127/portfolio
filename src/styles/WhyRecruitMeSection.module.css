@@ -1,0 +1,54 @@
+/* --- DESKTOP (STAYS AS IS) --- */
+.content {
+  padding: 30px;
+  line-height: 1.2;
+  width: 1000px;
+  position: relative;
+  left: 180px;
+  margin: 90px;
+  border-radius: 20px;
+  border: 6px solid var(--color-blue-200);
+  transition: background 0.1s ease; /* Smooth the flashlight movement */
+}
+
+.title {
+  color: var(--color-blue-300);
+  text-align: center;
+}
+
+.tertiarytTitle {
+  text-align: center;
+  color: var(--color-blue-200);
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  font-size: 1.1rem;
+  color: white; /* Changed to white so it's visible against the black background */
+  font-family: "Lucida Sans", sans-serif;
+}
+
+/* --- TABLET & MOBILE FIXES --- */
+@media (max-width: 1024px) {
+  .content {
+    width: 90%;      /* Fluid width */
+    left: 0;         /* Reset desktop offset */
+    margin: 40px auto; /* Center perfectly */
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    width: 60% !important; /* Take up most of the screen */
+    left: 0 !important;   /* REMOVE the left: 180px offset */
+    margin: 1px auto !important; /* Center it */
+    padding: 20px !important;
+    border-radius: 15px;
+  }
+
+  .title {
+    font-size: 1.5rem !important;
+    line-height: 1.2;
+  }
+}

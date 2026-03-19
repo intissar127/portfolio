@@ -1,0 +1,112 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Umbrella",
+      "price": 15.99,
+      "discount": 0.25,
+      "description": "Stay dry with this sturdy umbrella.",
+      "category": "Rainy Day",
+      "image": "https://cdn.pixabay.com/photo/2021/11/22/16/35/woman-6816827_960_720.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Raincoat",
+      "price": 49.99,
+      "discount": 0.2,
+      "description": "Waterproof raincoat for all seasons.",
+      "category": "Rainy Day",
+      "image": "https://cdn.pixabay.com/photo/2024/07/09/13/23/woman-8883462_1280.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Hot Coffee",
+      "price": 3.99,
+      "discount": 0.15,
+      "description": "A hot cup of coffee to brighten your rainy day.",
+      "category": "Rainy Day",
+      "image": "https://cdn.pixabay.com/photo/2022/12/02/13/31/coffee-7630878_1280.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Space Heater",
+      "price": 89.99,
+      "discount": 0.3,
+      "description": "Efficient and portable space heater.",
+      "category": "Cold Day",
+      "image": "https://cdn.pixabay.com/photo/2013/07/13/14/04/solar-cell-162055_640.png"
+    },
+    {
+      "id": 5,
+      "title": "Wool Sweater",
+      "price": 39.99,
+      "discount": 0.2,
+      "description": "Stay warm with this cozy wool sweater.",
+      "category": "Cold Day",
+      "image": "https://cdn.pixabay.com/photo/2016/03/31/19/21/clothes-1294933_1280.png"
+    },
+    {
+      "id": 6,
+      "title": "Hot Soup",
+      "price": 5.99,
+      "discount": 0.1,
+      "description": "A warm bowl of soup for cold days.",
+      "category": "Cold Day",
+      "image": "https://cdn.pixabay.com/photo/2017/01/24/20/30/soup-2006317_1280.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Sunglasses",
+      "price": 25.0,
+      "discount": 0.15,
+      "description": "Stylish sunglasses to protect your eyes.",
+      "category": "Sunny Day",
+      "image": "https://cdn.pixabay.com/photo/2013/06/03/09/46/sunglasses-115870_1280.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Sunscreen",
+      "price": 12.5,
+      "discount": 0.1,
+      "description": "Broad-spectrum sunscreen for UV protection.",
+      "category": "Sunny Day",
+      "image": "https://cdn.pixabay.com/photo/2022/06/11/13/32/sunscreen-7256345_1280.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Hiking Backpack",
+      "price": 79.99,
+      "discount": 0.2,
+      "description": "Durable and spacious backpack for outdoor adventures.",
+      "category": "Sunny Day",
+      "image": "https://cdn.pixabay.com/photo/2023/03/06/06/40/backpack-7832746_1280.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Ice Cream",
+      "price": 4.99,
+      "discount": 0.25,
+      "description": "Delicious ice cream to cool you down.",
+      "category": "Hot Weather",
+      "image": "https://cdn.pixabay.com/photo/2017/08/03/14/38/ice-cream-2576622_1280.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Cold Beverage",
+      "price": 2.99,
+      "discount": 0.15,
+      "description": "Refreshing cold beverage for hot days.",
+      "category": "Hot Weather",
+      "image": "https://cdn.pixabay.com/photo/2020/08/17/06/58/lemonade-5494511_1280.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Portable Fan",
+      "price": 19.99,
+      "discount": 0.2,
+      "description": "Compact fan to keep you cool.",
+      "category": "Hot Weather",
+      "image": "https://cdn.pixabay.com/photo/2014/05/21/15/48/fan-349932_1280.jpg"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+/* --- KEEP YOUR DESKTOP STYLES EXACTLY AS THEY ARE --- */
+.title {
+  color: var(--color-blue-500);
+  margin-bottom: 50px;
+  margin-left: 8px;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  left: 225px; /* Desktop offset */
+  gap: 99px;
+  background-color: #bafaf7;
+  border-radius: 23px;
+  margin: 230px;
+  margin-top: 280px;
+  margin-bottom: 130px;
+  padding: 60px;
+  padding-right: 80px;
+  width: 45%;
+}
+
+.underline {
+  font-family: inherit;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: solid 2px #474544;
+  color: #474544;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 0 0 0.875em 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  left: 200px;
+  top: -34px;
+  background-color: var(--color-blue-300);
+  border-radius: 23px;
+  width: 450px;
+  height: 400px;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.socialIcons {
+  background-color: #bafaf7;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px; 
+  padding-left: 70px;
+  padding-top: 3px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.socialIcons a:link,
+.socialIcons a:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  background-color: #aaaeae4c;
+  border-radius: 50%;
+  text-decoration: none;
+  color: rgb(76, 76, 78);
+  transition: all 0.3s ease;
+}
+
+/* --- TABLET BREAKPOINT (768px) --- */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack form on top of social icons */
+    left: 0;               /* Reset desktop offset */
+    margin: 100px auto;    /* Center the container */
+    width: 85%;            /* Take up more screen width */
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .container::before {
+    display: none;        /* Hide the background decorative box on mobile to save space */
+  }
+
+  .socialContact {
+    text-align: center;
+  }
+
+  .socialIcons {
+    padding-left: 0;       /* Center the icons */
+    justify-content: center;
+  }
+  
+  .title {
+    margin-left: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+}
+
+/* --- MOBILE BREAKPOINT (480px) --- */
+@media (max-width: 480px) {
+  .container {
+    width: 75%;
+    margin: 50px auto;
+    padding: 25px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .underline {
+    font-size: 0.9em;
+  }
+}
