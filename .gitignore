@@ -24,3 +24,4 @@ build
 *.njsproj
 *.sln
 *.sw?
+src/streamlit/weather-app-31f6e-b7ba43dc932a.json
